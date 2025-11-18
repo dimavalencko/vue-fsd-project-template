@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm set registry https://hub.energomera.ru/repository/npm-group/
 RUN npm config set strict-ssl false
 
 RUN npm install
