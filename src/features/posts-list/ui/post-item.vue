@@ -1,21 +1,20 @@
 <script setup lang="ts">
-
 const props = defineProps({
   id: {
     type: Number,
-    required: true
+    required: true,
   },
   title: {
     type: String,
     required: false,
-    default: ''
+    default: '',
   },
   body: {
     type: String,
     required: false,
-    default: ''
+    default: '',
   },
-})
+});
 </script>
 
 <template>

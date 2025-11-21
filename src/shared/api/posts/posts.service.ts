@@ -1,4 +1,4 @@
-import type { Post } from '@entities/posts'
+import type { Post } from '@entities/posts';
 import { posts } from './mock-data';
 
 class PostsService {
@@ -9,9 +9,8 @@ class PostsService {
       // return response.data
 
       return posts;
-    } 
-    catch (error: any) {
-      throw new Error(error.response?.data?.message || 'Ошибка при загрузке постов')
+    } catch (error: any) {
+      throw new Error(error.response?.data?.message || 'Ошибка при загрузке постов');
     }
   }
 

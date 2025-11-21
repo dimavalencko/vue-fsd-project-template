@@ -1,13 +1,11 @@
-import { createI18n } from "vue-i18n";
-import messages from "./messages";
-
-console.log('Messages: ', messages);
+import { createI18n } from 'vue-i18n';
+import messages from './messages';
 
 const i18n = createI18n({
   legacy: false,
   locale: 'ru',
   fallbackLocale: 'en',
-  messages: messages
+  messages,
 });
 
 export default i18n;

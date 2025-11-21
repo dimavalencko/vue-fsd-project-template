@@ -1,8 +1,8 @@
-import { defineStore } from "pinia";
-import { ref } from "vue";
+import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
-import { postsService } from "@/shared/api/posts/posts.service";
-import type { Post } from "@/entities";
+import { postsService } from '@/shared/api/posts/posts.service';
+import type { Post } from '@/entities';
 
 const usePostsStore = defineStore('posts-store', () => {
   const posts = ref<Post[]>([]);
@@ -11,20 +11,18 @@ const usePostsStore = defineStore('posts-store', () => {
     try {
       const result = await postsService.getPosts();
       posts.value = result;
-    } 
-    catch (error) {
-      console.log('Error:' , error);
+    } catch (error) {
+      console.log('Error:', error);
     }
   }
-
 
   return {
     // state
     posts,
 
     // actions
-    getPosts
-  }
+    getPosts,
+  };
 });
 
-export default usePostsStore;
+export { usePostsStore };

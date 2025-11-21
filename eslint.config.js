@@ -1,7 +1,7 @@
-import js from '@eslint/js'
-import vue from 'eslint-plugin-vue'
-import globals from 'globals'
-import prettier from 'eslint-config-prettier'
+import js from '@eslint/js';
+import vue from 'eslint-plugin-vue';
+import globals from 'globals';
+import prettier from 'eslint-config-prettier';
 
 export default [
   // Игнорируемые файлы
@@ -94,4 +94,4 @@ export default [
       ...prettier.rules,
     },
   },
-]
+];

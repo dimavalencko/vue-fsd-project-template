@@ -1,5 +1,5 @@
-import axios, { type AxiosInstance, type AxiosRequestConfig } from "axios";
-import { setupInterceptors } from "./interceptors";
+import axios, { type AxiosInstance, type AxiosRequestConfig } from 'axios';
+import { setupInterceptors } from './interceptors';
 
 console.log('ImportMeta env: ', import.meta.env);
 console.log('ImportMeta VITE_API_URL: ', import.meta.env.VITE_API_URL);
@@ -11,13 +11,12 @@ const httpConfig: AxiosRequestConfig = {
   headers: {
     'Content-Type': 'application/json',
   },
-}
+};
 
 // Инстанс
-export const defaultHttpClient: AxiosInstance = axios.create(httpConfig)
+export const defaultHttpClient: AxiosInstance = axios.create(httpConfig);
 
 // Интерсепторы
-setupInterceptors(defaultHttpClient)
+setupInterceptors(defaultHttpClient);
 
 export default defaultHttpClient;
-

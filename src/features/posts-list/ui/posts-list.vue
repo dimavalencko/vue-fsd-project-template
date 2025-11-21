@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeMount } from 'vue';
 import PostItem from './post-item.vue';
-import usePostsStore from '@shared/stores/posts-store';
+import { usePostsStore } from '@entities/posts';
 
 const postsStore = usePostsStore();
 

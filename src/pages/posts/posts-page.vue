@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import PostsList from '@/features/posts-list/ui/posts-list.vue';
-
 </script>
 
 <template>
   <div class="posts-page">
-    <PostsList/>
+    <PostsList />
   </div>
 </template>
 

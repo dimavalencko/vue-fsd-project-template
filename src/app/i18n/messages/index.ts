@@ -4,6 +4,6 @@ import { default as en } from './ru.json';
 const messages = {
   en,
   ru,
-}
+};
 
 export default messages;

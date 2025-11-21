@@ -1,1 +1,1 @@
-export { default } from './ui/posts-list.vue'
+export { default } from './ui/posts-list.vue';

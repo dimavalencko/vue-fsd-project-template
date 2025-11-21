@@ -1,5 +1,3 @@
-import { errorResponseInterceptor } from './error-response'
+import { errorResponseInterceptor } from './error-response';
 
-export const responseInterceptors = [
-  errorResponseInterceptor
-]
+export const responseInterceptors = [errorResponseInterceptor];

@@ -1,16 +1,15 @@
-FROM hub.energomera.ru/node:lts-alpine AS build
+FROM node:lts-alpine AS build
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm config set strict-ssl false
+RUN npm ci
 
-RUN npm install
 COPY . .
 RUN npm run build
 
-FROM hub.energomera.ru/nginx:stable-alpine AS prod
+FROM nginx:stable-alpine AS prod
 COPY --from=build /app/dist /opt/www
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d
